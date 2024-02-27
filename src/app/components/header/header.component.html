@@ -1,0 +1,25 @@
+<header
+  class="d-flex justify-content-between align-items-center p-4 bg-black text-white"
+>
+  <img src="assets/logo.png" alt="angular logo" />
+  <ul class="d-flex gap-4 m-0 p-0">
+    <li>
+      <a
+        class="py-2 px-1"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        class="py-2 px-1"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/users"
+        >Users</a
+      >
+    </li>
+  </ul>
+</header>

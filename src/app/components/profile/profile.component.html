@@ -1,0 +1,51 @@
+<div class="profile w-75 my-5 p-5 m-auto d-flex flex-column justify-content-start">
+  <div class="img-wrap">
+    <img class="" src="assets/profilePic.jpg" alt="profile pic" />
+    @if(user) {
+    <h4>{{ user.name }}</h4>
+    }
+  </div>
+
+  <div class="txt-wrap">
+    @if (user && !toggleEdit) {
+    <p><mat-icon class="icon">mail</mat-icon> {{ user.email }}</p>
+    <p><mat-icon class="icon">phone</mat-icon> {{ user.phone }}</p>
+    <p><mat-icon class="icon">cake</mat-icon> {{ user.dateOfBirth | date }}</p>
+    <p><mat-icon class="icon">location_on</mat-icon> Egypt</p>
+    <button (click)="editInfo()">Edit Details</button>
+    } @if(toggleEdit) {
+    <form [formGroup]="updateValidation">
+      <div>
+        <div>
+          <mat-icon class="icon">mail</mat-icon>
+          <p>Email</p>
+        </div>
+        <input formControlName="email" type="text" />
+      </div>
+      <div>
+        <div>
+          <mat-icon class="icon">phone</mat-icon>
+          <p>Phone</p>
+        </div>
+        <input formControlName="phone" type="text" />
+      </div>
+      <div>
+        <div>
+          <mat-icon class="icon">cake</mat-icon>
+          <p>Date of Birth</p>
+        </div>
+        <input formControlName="date" type="date" />
+      </div>
+      <div>
+        <div>
+          <mat-icon class="icon">location_on</mat-icon>
+          <p>City</p>
+        </div>
+        <input type="text" />
+      </div>
+      <button (click)="editInfo()">Done</button>
+      <button class="delete" (click)="delete()">Delete</button>
+    </form>
+    }
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<main>
+  @if (!usersData?.length) {
+  <h2>No users yet :(</h2>
+  } @for (user of usersData; track usersData.id) {
+  <app-one-user style="width: 100%" [user]="user"></app-one-user>
+  }
+</main>

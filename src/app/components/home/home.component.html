@@ -1,0 +1,29 @@
+<main class="w-100 d-flex flex-column justify-content-center align-items-center p-5 mt-5">
+  <form [formGroup]="regValidation">
+    <h1 class="mb-5 w-100">Register</h1>
+    <div class="d-flex flex-column gap-1 mb-2">
+      <label for="name">Name</label>
+      <input type="text" formControlName="name" id="name" placeholder="Enter your name" [ngClass]="isNameValid ? '' : 'invalid-input'" />
+      <p class="invalid">@if(!isNameValid) { English characters only and length between 4-42 }</p>
+    </div>
+    <div class="d-flex flex-column gap-1 mb-2">
+      <label for="email">E mail</label>
+      <input type="text" formControlName="email" id="email" placeholder="Enter your email" [ngClass]="isEmailValid ? '' : 'invalid-input'" />
+      <p class="invalid">@if(!isEmailValid) { Please provide a valid Email address }</p>
+    </div>
+    <div class="d-flex flex-column gap-1 mb-2">
+      <label for="date">Date of birth</label>
+      <div class="d-flex gap-3">
+        <input type="date" formControlName="date" id="date" [ngClass]="isDateValid ? '' : 'invalid-input'" />
+      </div>
+      <p class="invalid">@if (!isDateValid) {Only users aged between 18 and 80 are allowed.}</p>
+    </div>
+    <div class="d-flex flex-column gap-1 mb-2 position-relative">
+      <span class="position-absolute">+20</span>
+      <label for="phone">Phone</label>
+      <input class="phone" type="number" formControlName="phone" id="phone" placeholder="102 (3456) 789" [ngClass]="isPhoneValid ? '' : 'invalid-input'" />
+      <p class="invalid">@if (!isPhoneValid) { Please provide a valid Egyptian mobile number }</p>
+    </div>
+    <input (click)="add()" type="button" value="ADD" class="w-100 myBtn mb-4" />
+  </form>
+</main>

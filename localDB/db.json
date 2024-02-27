@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "3322",
+      "name": "Mohamed Alkayal",
+      "email": "mohamedalkayal97@gmail.com",
+      "dateOfBirth": "1997-06-27",
+      "phone": 1090562346
+    },
+    {
+      "id": "5365",
+      "name": "Mohamed Alkayal",
+      "email": "mohamedalkayal97@gmail.com",
+      "dateOfBirth": "1998-02-22",
+      "phone": "1090562346"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+.user {
+  margin-bottom: 22px;
+  width: 100%;
+  padding: 22px;
+  background-color: #151515;
+  border-radius: 8px;
+  color: #eee;
+}
+
+.user img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.user .user-text h4 {
+  font-size: 18px;
+}
+
+.user .user-text p {
+  font-size: 14px;
+}
+
+.user button {
+  background-color: var(--main);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  height: fit-content;
+  transition: 300ms;
+  font-size: 14px;
+  font-weight: 600;
+  &:hover {
+    background-color: rgb(200, 0, 207);
+  }
+}

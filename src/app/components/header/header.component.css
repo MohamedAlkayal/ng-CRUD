@@ -1,0 +1,18 @@
+img {
+  width: 150px;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+  border-bottom: 1px solid black;
+  transition: 300ms;
+  &:hover {
+    color: var(--main) !important;
+  }
+}
+
+.active {
+  border-bottom: 1px solid var(--main);
+  color: var(--main) !important;
+}
