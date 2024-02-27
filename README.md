@@ -14,8 +14,7 @@ This project is an Angular-based user management system that allows users to reg
 1. **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
-
+    git clone https://github.com/MohamedAlkayal/ng-CRUD.git
 
 2. **Install Dependencies:**
 Navigate to the project directory and install the dependencies using npm or yarn:
